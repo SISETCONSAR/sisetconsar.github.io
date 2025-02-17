@@ -2,28 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0, user-scalable=no">
     <title>INFO.ESTADISTICA CONSAR</title>
     <style>
-        /* Aseguramos que el iframe ocupe toda la página */
+        /* Ajuste general del tamaño */
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            font-family: Arial, sans-serif;
         }
+
+        /* Ajuste del título */
+        h1 {
+            text-align: center;
+            font-size: 20px; /* Reducimos el tamaño del texto */
+            margin: 10px 0;
+        }
+
+        /* Ajuste del iframe */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh; /* Para evitar que el iframe sea demasiado grande */
+        }
+
         iframe {
-            width: 100%;
-            height: 100vh; 
+            max-width: 90%;
+            height: 80vh; /* Reducimos la altura */
             border: none;
+            transform: scale(0.9); /* Reducimos el tamaño del contenido */
+            transform-origin: top center; /* Mantiene el contenido centrado */
         }
     </style>
 </head>
 <body>
-    <!-- Incrustar el reporte de Looker Studio -->
-  <iframe src="https://lookerstudio.google.com/embed/reporting/95c771fe-722f-43cd-8822-fb1df40964cc/page/p_edtmvisjpd&rm=minimal"
-    frameborder="0" 
-    allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups-to-escape-sandbox">
-</iframe>
+    <h1>Informe desde Looker Studio</h1>
+    
+    <div class="container">
+        <iframe 
+            src="https://lookerstudio.google.com/embed/reporting/95c771fe-722f-43cd-8822-fb1df40964cc/page/p_edtmvisjpd" 
+            frameborder="0"
+            allowfullscreen 
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+        </iframe>
+    </div>
 
 </body>
 </html>
